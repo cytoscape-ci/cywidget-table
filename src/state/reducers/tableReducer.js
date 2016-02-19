@@ -1,13 +1,12 @@
-let INITIAL_STATE = {
+const NODE_SELECTED = "NODE_SELECTED";
+const EDGE_SELECTED = "EDGE_SELECTED";
+
+const INITIAL_STATE = {
   selected: null
 };
 
-export const NODE_SELECTED = "NODE_SELECTED";
-export const EDGE_SELECTED = "EDGE_SELECTED";
-
 
 export function tableReducer(state = INITIAL_STATE, action) {
-
 
   console.log("%%%%%%%%% TBL %%%%%%%%%%");
   console.log(action)
@@ -17,7 +16,8 @@ export function tableReducer(state = INITIAL_STATE, action) {
 
     case NODE_SELECTED:
     case EDGE_SELECTED:
-      return Object.assign(state, {
+      console.log("%%%%%%%%% TBL UPDATED2");
+      return Object.assign({}, state, {
         selected: action.selected
       });
 

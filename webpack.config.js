@@ -1,12 +1,12 @@
 var path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/TableWidget.jsx"),
+  entry: path.resolve(__dirname, "src/PropTableWidget.jsx"),
 
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "widget.js",
-    library: "TableWidget",
+    library: "PropTableWidget",
     libraryTarget: "umd"
   },
   resolve: {
